@@ -180,7 +180,7 @@ provides for the following structural units by default:
 
 =head3 Identifier
 
-This is a (potentially) fully canonicalized identifier for a elemnt in the
+This is a (potentially) fully canonicalized identifier for an element in the
 query. This element could be a schema, table, or column. The Visitor will
 determine validity within the context of that SQL dialect. The AST is only
 responsible for validating that the elements are non-empty Strings.
@@ -236,7 +236,7 @@ A Time represents (generally) an hour, minute, and second.
 =item * DateTime
 
 A DateTime represents the complete description necessary to determine a specific point in
-time. This could correspond to a L<DateTime/> object in Perl.
+time. This could correspond to a L<DateTime> object in Perl.
 
 =back
 
@@ -260,7 +260,7 @@ attempt to treat this value as a BindParameter or not.
 
 An Operator would be, in SQL dialect terms, a unary operator, a binary operator,
 a trinary operator, or a function. Since different dialects may have a given
-functionality as an operator or a function (such as CONCAT in MySQl vs. || in
+functionality as an operator or a function (such as CONCAT in MySQL vs. || in
 Oracle for string concatenation), they will be represented in the AST as generic
 operators.
 
@@ -344,7 +344,7 @@ explicitly specified by node descent in the AST.
 =head2 SQL clauses
 
 These are all the legal and acceptable clauses within the AST that would
-correpsond to clauses in a SQL statement. Not all clauses are legal within a
+correspond to clauses in a SQL statement. Not all clauses are legal within a
 given RDBMS engine's SQL dialect and some clauses may be required in one and
 optional in another. Detecting and enforcing those engine-specific restrictions
 is the responsibility of the Visitor object.
@@ -456,7 +456,7 @@ The hash for an set clause will be composed as follows:
       type => 'Set',
       args => [
           [ Identifier ],
-          [ Expresion ],
+          [ Expression ],
       ],
   }
 
