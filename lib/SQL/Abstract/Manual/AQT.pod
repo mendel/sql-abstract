@@ -9,6 +9,7 @@ robkinyon: Rob Kinyon C<< <rkinyon@cpan.org> >>
 =head1 SYNOPSIS
 
 The AST is a first attempt to write an abstract syntax tree for SQL.
+
 =head1 MOTIVATIONS
 
 =head1 GOALS
