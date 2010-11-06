@@ -565,6 +565,20 @@ The hash for a for clause is composed as follows:
       ],
   }
 
+=item * RDBMS-specific orderby modifiers (eg. C<NULLS LAST> or C<USING operator> in PostgreSQL)
+
+=item * RDBMS-specific "tables" modifiers (eg. C<ONLY> in PostgreSQL)
+
+=item * RDBMS-specific "tables" clauses (eg. C<VALUES> in PostgreSQL - anywhere where a table can appear)
+
+=item * RDBMS-specific SELECT clauses (eg. C<DISTINCT ON ( expression [, ...] )>, C<WITH [ RECURSIVE ] with_query>, C<WINDOW window_name AS ( window_definition )> in PostgreSQL)
+
+=item * RDBMS-specific INSERT/UPDATE clauses (eg. C<RETURNING> in PostgreSQL)
+
+=item * RDBMS-specific UPDATE clauses (eg. C<FROM> in PostgreSQL)
+
+=item * RDBMS-specific DELETE clauses (eg. C<USING> in PostgreSQL)
+
 =back
 
 Convert INSERT and UPDATE into ->populate form.
