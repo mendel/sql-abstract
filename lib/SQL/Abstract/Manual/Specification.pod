@@ -542,6 +542,29 @@ The hash for a for clause is composed as follows:
 
 =item * start the API guidelines
 
+=item * support C<AS> for the elements of the SELECT/UPDATE column-list
+
+=item * SQL expressions in orderby/groupby (the current AST spec only allows for Identifier and Number)
+
+=item * support for C<DISTINCT>
+
+=item * support for C<HAVING> clause of SELECT
+
+=item * support for C<DEFAULT VALUES> in INSERT
+
+=item * support for C<DEFAULT> in the column-list of INSERT and UPDATE
+
+=item * support for C<INSERT INTO ... SELECT ...> (here the SELECT part is not a real subquery - not even in parentheses)
+
+=item * make C<[ Identifiers ]> of "set" a separate key-value pair? eg.
+  {
+      type => 'Set',
+      identifiers => [ Identifier ],
+      args => [
+          [ Expression ],
+      ],
+  }
+
 =back
 
 Convert INSERT and UPDATE into ->populate form.
